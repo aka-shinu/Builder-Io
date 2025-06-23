@@ -14,7 +14,7 @@ interface PageProps {
   };
 }
 
-export default async function Page({ params, searchParams }: PageProps) {
+export default async function Page({ params, searchParams }: any) {
   const path = "/" + (params.page?.join("/") || "");
   const modelName = searchParams.modelName;
   const content = await builder
