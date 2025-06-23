@@ -216,7 +216,7 @@ export default function BlogCards({ data }: BlogCardProps) {
 
         </div>
       </div>
-      {/* {totalPages > 1 && renderPagination()} */}
+      {totalPages > 1 && renderPagination()}
     </div>
   );
 }
