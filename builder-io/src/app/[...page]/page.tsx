@@ -15,9 +15,9 @@ interface PageProps {
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const path = "/" + ((await params).page?.join("/") || "");
-  const modelName =  (await searchParams).modelName;
-  console.log(modelName)
+  const path = "/" + (params.page?.join("/") || "");
+  const modelName = searchParams.modelName;
+  console.log(modelName);
   const content = await builder
     .get(modelName as string, {
       userAttributes: {

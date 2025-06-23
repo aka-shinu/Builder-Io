@@ -1,5 +1,3 @@
-// app/[...page]/page.tsx
-import { useParams } from 'next/navigation';
 import { builder } from "@builder.io/sdk";
 import { RenderBuilderContent } from "@/components/builder";
 import "@/styles/style1.css";
@@ -17,13 +15,13 @@ interface PageProps {
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const path = "/" + ((await params).page?.join("/") || "");
-  const modelName =  (await searchParams).modelName;
-  console.log(modelName, "11")
+  const path = "/" + (params.page?.join("/") || "");
+  const modelName = searchParams.modelName;
+  console.log(modelName);
   const content = await builder
     .get(modelName as string, {
       userAttributes: {
-        urlPath: "/",
+        urlPath: path,
         revalidate: 0
       },
     })
