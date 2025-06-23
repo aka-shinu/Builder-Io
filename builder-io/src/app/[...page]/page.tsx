@@ -1,5 +1,3 @@
-// app/[...page]/page.tsx
-import { useParams } from 'next/navigation';
 import { builder } from "@builder.io/sdk";
 import { RenderBuilderContent } from "@/components/builder";
 import "@/styles/style1.css";

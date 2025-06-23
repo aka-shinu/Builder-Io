@@ -9,6 +9,7 @@ import CaseStudies from "./components/CaseStudies";
 import Faq from "./components/Faq";
 import ConsultationCTA from "./components/ConsultationCTA";
 import Testimonials from "./components/Testimonial";
+import Footer from "./components/Footer";
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
 Builder.registerComponent(NewsletterBanner, {
@@ -19,6 +20,9 @@ Builder.registerComponent(ConsultationCTA, {
 });
 Builder.registerComponent(Testimonials, {
   name: "Testimonials",
+});
+Builder.registerComponent(Footer, {
+  name: "Footer",
 });
 
 Builder.registerComponent(Navbar, {
